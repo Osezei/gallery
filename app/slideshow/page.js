@@ -107,7 +107,7 @@ const Page = () => {
                         close
                       </button>
                       <Image
-                        src={`/${urlBigScreen}`}
+                        src={urlBigScreen}
                         width={475}
                         height={560}
                         alt={slide.name}
@@ -167,7 +167,7 @@ const Page = () => {
                     <div className="flex">
                       <div className="relative">
                         <Image
-                          src={`/${urlTabletScreen}`}
+                          src={urlTabletScreen}
                           width={475}
                           height={560}
                           alt={slide.name}
@@ -198,7 +198,7 @@ const Page = () => {
                       </div>
 
                       <Image
-                        src={`/${urlArtistTablet}`}
+                        src={urlArtistTablet}
                         width={128}
                         height={128}
                         priority
@@ -230,7 +230,7 @@ const Page = () => {
                         close
                       </button>
                       <Image
-                        src={`/${urlTabletScreen}`}
+                        src={urlTabletScreen}
                         width={700}
                         height={712}
                         alt={slide.name}
@@ -289,7 +289,7 @@ const Page = () => {
                     <div className="flex flex-col">
                       <div className="relative">
                         <Image
-                          src={`/${urlMobileScreen}`}
+                          src={urlMobileScreen}
                           width={327}
                           height={280}
                           alt={slide.name}
@@ -320,7 +320,7 @@ const Page = () => {
                       </div>
 
                       <Image
-                        src={`/${urlArtistMobile}`}
+                        src={urlArtistMobile}
                         width={64}
                         height={64}
                         priority
@@ -352,7 +352,7 @@ const Page = () => {
                         close
                       </button>
                       <Image
-                        src={`/${urlMobileScreen}`}
+                        src={urlMobileScreen}
                         width={327}
                         height={390}
                         alt={slide.name}
