@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Logo from "@/public/static/assets/shared/logo.svg";
+import Logo from "@/public/assets/shared/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 

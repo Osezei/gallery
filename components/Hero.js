@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { data } from "@/utils/data";
+import { data } from "@/public/data";
 import Image from "next/image";
 
 const Hero = () => {
@@ -15,8 +15,8 @@ const Hero = () => {
           <div key={index} className="relative">
             <Image
               //src={`/${item.images.hero.large}`}
-              src={`/${url}`}
-              // src={url}
+              //src={item.images.hero.large}
+              src={url}
               width={310}
               height={250}
               alt={item.name}
@@ -24,7 +24,7 @@ const Hero = () => {
               className="overflow-hidden w-[310px] h-[250px] object-cover hidden md:block"
             />
             <Image
-              src={`/${urlSmallScreen}`}
+              src={urlSmallScreen}
               width={327}
               height={250}
               alt={item.name}

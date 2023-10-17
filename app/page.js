@@ -6,7 +6,8 @@ export default function Home() {
   const activePage = "home";
   return (
     <Layout activePage={activePage}>
-      <Hero />
+      {" "}
+      <Hero />{" "}
     </Layout>
   );
 }
