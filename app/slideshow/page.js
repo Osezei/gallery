@@ -5,9 +5,9 @@ import Modal from "@/components/Modal";
 import { data } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
-import View from "@/public/assets/shared/icon-view-image.svg";
-import NextButton from "public/assets/shared/icon-next-button.svg";
-import PrevButton from "public/assets/shared/icon-back-button.svg";
+import View from "@/public/static/assets/shared/icon-view-image.svg";
+import NextButton from "public/static/assets/shared/icon-next-button.svg";
+import PrevButton from "public/static/assets/shared/icon-back-button.svg";
 const Page = () => {
   const [current, setCurrent] = useState(0);
   const [openModal, setOpenModal] = useState(false);
