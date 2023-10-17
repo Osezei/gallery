@@ -8,6 +8,8 @@ import Link from "next/link";
 import View from "@/public/assets/shared/icon-view-image.svg";
 import NextButton from "public/assets/shared/icon-next-button.svg";
 import PrevButton from "public/assets/shared/icon-back-button.svg";
+import "animate.css";
+
 const Page = () => {
   const [current, setCurrent] = useState(0);
   const [openModal, setOpenModal] = useState(false);
@@ -29,14 +31,17 @@ const Page = () => {
   return (
     <Layout activePage={activePage}>
       {/* desktop screen */}
-      <section className="hidden lg:block mt-[100px]">
+      <section className="hidden lg:block mt-[100px] ">
         {data.map((slide, index) => {
           const urlBigScreen = slide.images.hero.large;
           // const urlMobileScreen = slide.images.hero.small;
           const urlArtist = slide.artist.image;
 
           return (
-            <div key={index} className="">
+            <div
+              key={index}
+              className="animate__animated animate__fadeIn transition delay-150 duration-300 ease-in-out"
+            >
               {index === current && (
                 <section className="relative">
                   <article className="flex justify-center gap-[30px]">
@@ -86,19 +91,21 @@ const Page = () => {
                       </div>
                     </div>
                     <div className="relative">
-                      <p className="text-[200px] text-right font-bold leading-[150px] text-[#F3F3F3]">
+                      <p className=" text-[200px] text-right font-bold leading-[150px] text-[#F3F3F3]">
                         {slide.year}
                       </p>
-                      <p className="text-[#7D7D7D] lg:leading-[28px] text-[14px] font-semibold w-[350px] absolute top-[115px] right-[125px]">
-                        {slide.description}
-                      </p>
-                      <Link
-                        href={slide.source}
-                        target="_blank"
-                        className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[410px] underline cursor-pointer"
-                      >
-                        GO TO SOURCE
-                      </Link>
+                      <div className="absolute top-[115px] right-[125px]">
+                        <p className="text-[#7D7D7D] lg:leading-[28px] text-[14px] font-semibold w-[350px] mb-[81px]">
+                          {slide.description}
+                        </p>
+                        <Link
+                          href={slide.source}
+                          target="_blank"
+                          className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[350px] underline cursor-pointer"
+                        >
+                          GO TO SOURCE
+                        </Link>
+                      </div>
                     </div>
                   </article>
                   {/* modal */}
@@ -164,7 +171,10 @@ const Page = () => {
           const urlTabletScreen = slide.images.hero.large;
           const urlArtistTablet = slide.artist.image;
           return (
-            <div key={index} className="">
+            <div
+              key={index}
+              className="animate__animated animate__fadeIn transition delay-150 duration-300 ease-in-out"
+            >
               {index === current && (
                 <section className="relative">
                   <article className="flex flex-col gap-y-[64px] place-items-center">
@@ -218,13 +228,13 @@ const Page = () => {
                         <p className="text-[#7D7D7D] leading-[28px] text-[14px] font-semibold w-[350px] ">
                           {slide.description}
                         </p>
-                        <Link
+                        <a
                           href={slide.source}
                           target="_blank"
                           className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[40px] underline cursor-pointer"
                         >
                           GO TO SOURCE
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </article>
@@ -290,7 +300,10 @@ const Page = () => {
           const urlMobileScreen = slide.images.hero.small;
           const urlArtistMobile = slide.artist.image;
           return (
-            <div key={index} className="">
+            <div
+              key={index}
+              className="animate__animated animate__fadeIn transition delay-150 duration-300 ease-in-out"
+            >
               {index === current && (
                 <section className="relative">
                   <article className="flex flex-col place-items-center">
