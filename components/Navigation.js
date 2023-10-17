@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "@/public/assets/shared/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import "animate.css";
 
 const Navigation = () => {
   const [toggle, setToggle] = useState(false);
@@ -12,7 +13,7 @@ const Navigation = () => {
   };
   const router = useRouter();
   return (
-    <section>
+    <section className="animate__animated animate__flipInX">
       <nav className="flex justify-between w-[327px] md:w-[688px] lg:w-[1360px] mt-[29px] md:mt-10 mx-auto">
         <Link href="/">
           <Image

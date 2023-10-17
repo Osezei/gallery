@@ -92,9 +92,13 @@ const Page = () => {
                       <p className="text-[#7D7D7D] lg:leading-[28px] text-[14px] font-semibold w-[350px] absolute top-[115px] right-[125px]">
                         {slide.description}
                       </p>
-                      <p className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[410px] underline cursor-pointer">
+                      <Link
+                        href={slide.source}
+                        target="_blank"
+                        className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[410px] underline cursor-pointer"
+                      >
                         GO TO SOURCE
-                      </p>
+                      </Link>
                     </div>
                   </article>
                   {/* modal */}
@@ -214,9 +218,13 @@ const Page = () => {
                         <p className="text-[#7D7D7D] leading-[28px] text-[14px] font-semibold w-[350px] ">
                           {slide.description}
                         </p>
-                        <p className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[40px] underline cursor-pointer">
+                        <Link
+                          href={slide.source}
+                          target="_blank"
+                          className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[40px] underline cursor-pointer"
+                        >
                           GO TO SOURCE
-                        </p>
+                        </Link>
                       </div>
                     </div>
                   </article>
@@ -295,8 +303,8 @@ const Page = () => {
                           alt={slide.name}
                           className=""
                         />
-                        <div className="w-[280px] h-[104px] bg-white absolute top-[230px] left-o pl-[24px]">
-                          <p className="text-[24px] font-bold leading-[29px]">
+                        <div className="w-[280px] h-[104px] bg-white absolute top-[230px] left-o pl-[24px] pt-[24px] pr-[24px]">
+                          <p className="text-[24px] font-bold leading-[29px] max-h-[232px]">
                             {slide.name}
                           </p>
                           <p className="text-[#7D7D7D] text-[15px]">
@@ -328,7 +336,7 @@ const Page = () => {
                         className="object-contain mt-[54px]"
                       />
                     </div>
-                    <div className="relative h-[384px] w-[327px]">
+                    <div className="relative  h-[404px] w-[327px]">
                       <p className="text-[100px] font-bold leading-[100px] text-right text-[#F3F3F3]">
                         {slide.year}
                       </p>
@@ -336,9 +344,13 @@ const Page = () => {
                         <p className="text-[#7D7D7D] leading-[28px] text-[14px] font-semibold w-[327px] ">
                           {slide.description}
                         </p>
-                        <p className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[40px] underline cursor-pointer">
+                        <Link
+                          href={slide.source}
+                          target="_blank"
+                          className="text-[#7D7D7D] font-bold text-[9px] leading-[1.929px] mt-[40px] underline cursor-pointer"
+                        >
                           GO TO SOURCE
-                        </p>
+                        </Link>
                       </div>
                     </div>
                   </article>
@@ -371,13 +383,13 @@ const Page = () => {
                         {slide.artist.name}
                       </p>
                     </div>
-                    <div className="w-[91px] flex justify-between">
+                    <div className="w-[57px] flex justify-between">
                       <button onClick={prevSlide}>
                         <Image
                           src={PrevButton}
                           alt="previousButton"
                           width={26}
-                          height={24}
+                          height={16}
                         />
                       </button>
                       <button onClick={nextSlide}>
@@ -386,7 +398,7 @@ const Page = () => {
                           src={NextButton}
                           alt="nextButton"
                           width={26}
-                          height={24}
+                          height={16}
                         />
                       </button>
                     </div>

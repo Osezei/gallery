@@ -2,9 +2,10 @@
 import React from "react";
 import { data } from "@/public/data";
 import Image from "next/image";
+import Link from "next/link";
+import "animate.css";
 
 const Hero = () => {
-  //console.log(data);
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-[23px] md:gap-10 w-[327px] md:w-[688px] lg:w-[1360px] mx-auto">
       {data.map((item, index) => {
@@ -12,10 +13,13 @@ const Hero = () => {
         const url = item.images.hero.large;
         const urlSmallScreen = item.images.hero.small;
         return (
-          <div key={index} className="relative">
+          <Link
+            target="_blank"
+            href={item.source}
+            key={index}
+            className="relative animate__animated animate__fadeIn"
+          >
             <Image
-              //src={`/${item.images.hero.large}`}
-              //src={item.images.hero.large}
               src={url}
               width={310}
               height={250}
@@ -40,7 +44,7 @@ const Hero = () => {
                 {item.artist.name}
               </p>
             </div>
-          </div>
+          </Link>
         );
       })}
     </section>
