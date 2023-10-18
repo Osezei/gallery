@@ -318,22 +318,23 @@ const Page = ({}) => {
                 <section className="">
                   {/* modal */}
                   {openModal && (
-                    <div className="absolute box z-30 bg-black/90 flex flex-col justify-center items-center">
-                      <div className="w-[327px] text-right">
+                    <div className="small-screen-box z-30 bg-green-700/90 ">
+                      <div className="w-[327px] mx-auto mt-[15%]">
                         <button
                           onClick={() => setOpenModal(false)}
-                          className="font-bold text-[14px] uppercase text-white leading-[3px] mb-[32px] z-30"
+                          className="font-bold text-[14px] uppercase text-white leading-[3px] mb-[32px] w-full text-right"
                         >
                           close
                         </button>
+
+                        <Image
+                          src={urlMobileScreen}
+                          width={327}
+                          height={390}
+                          alt={slide.name}
+                          className="object-cover overflow-hidden w-[327px] h-[390px]"
+                        />
                       </div>
-                      <Image
-                        src={urlMobileScreen}
-                        width={327}
-                        height={390}
-                        alt={slide.name}
-                        className="object-contain"
-                      />
                     </div>
                   )}
                   {/* end of modal */}
