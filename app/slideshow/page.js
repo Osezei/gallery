@@ -10,7 +10,7 @@ import NextButton from "public/assets/shared/icon-next-button.svg";
 import PrevButton from "public/assets/shared/icon-back-button.svg";
 import "animate.css";
 
-const Page = () => {
+const Page = ({}) => {
   const [current, setCurrent] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const length = data.length;
@@ -43,7 +43,30 @@ const Page = () => {
               className="animate__animated animate__fadeIn transition delay-150 duration-300 ease-in-out"
             >
               {index === current && (
-                <section className="relative">
+                <section className="">
+                  {/* modal */}
+                  {openModal && (
+                    <div className="absolute top-0 left-0 z-30 h-screen w-screen bg-black/90 flex justify-center items-center">
+                      <div>
+                        <div className="w-[475px] flex justify-end">
+                          <button
+                            onClick={() => setOpenModal(false)}
+                            className=" font-bold text-[14px] uppercase text-white leading-[3px] mb-[41px]"
+                          >
+                            close
+                          </button>
+                        </div>
+                        <Image
+                          src={urlBigScreen}
+                          width={475}
+                          height={560}
+                          alt={slide.name}
+                          className="overflow-hidden object-contain bg-black/90 "
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {/* end of modal */}
                   <article className="flex justify-center gap-[30px]">
                     <div className="flex">
                       <div className="relative">
@@ -109,23 +132,7 @@ const Page = () => {
                     </div>
                   </article>
                   {/* modal */}
-                  {openModal && (
-                    <div className="">
-                      <button
-                        onClick={() => setOpenModal(false)}
-                        className="z-20 absolute top-[20px] right-[400px] font-bold text-[14px] uppercase text-white leading-[3px]"
-                      >
-                        close
-                      </button>
-                      <Image
-                        src={urlBigScreen}
-                        width={475}
-                        height={560}
-                        alt={slide.name}
-                        className=" object-contain absolute top-0 bg-black/90 h-screen w-screen z-10"
-                      />
-                    </div>
-                  )}
+                  {/* {openModal && <Modal slide={slide} />} */}
                   {/* end of modal */}
                   <div className="h-[1px] w-[1360px] bg-[black] max-w-full mx-auto mt-[75px] mb-[24px]"></div>
                   <div className="flex justify-between w-[1360px] items-center mx-auto">
@@ -176,7 +183,28 @@ const Page = () => {
               className="animate__animated animate__fadeIn transition delay-150 duration-300 ease-in-out"
             >
               {index === current && (
-                <section className="relative">
+                <section className="rel">
+                  {/* modal */}
+                  {openModal && (
+                    <div className="absolute top-0 left-0 bg-black/90 z-30 h-screen w-screen flex flex-col justify-center items-center">
+                      <div className="w-[700px] text-right mb-[41px]">
+                        <button
+                          onClick={() => setOpenModal(false)}
+                          className=" font-bold text-[14px] uppercase text-white leading-[3px]"
+                        >
+                          close
+                        </button>
+                      </div>
+                      <Image
+                        src={urlTabletScreen}
+                        width={700}
+                        height={712}
+                        alt={slide.name}
+                        className="overflow-hidden object-contain"
+                      />
+                    </div>
+                  )}
+                  {/* end of modal */}
                   <article className="flex flex-col gap-y-[64px] place-items-center">
                     <div className="flex">
                       <div className="relative">
@@ -238,25 +266,7 @@ const Page = () => {
                       </div>
                     </div>
                   </article>
-                  {/* modal */}
-                  {openModal && (
-                    <div className="">
-                      <button
-                        onClick={() => setOpenModal(false)}
-                        className="z-20 absolute top-[20px] right-[100px] font-bold text-[14px] uppercase text-white leading-[3px]"
-                      >
-                        close
-                      </button>
-                      <Image
-                        src={urlTabletScreen}
-                        width={700}
-                        height={712}
-                        alt={slide.name}
-                        className=" object-contain absolute top-0 bg-black/90 h-screen w-screen z-10"
-                      />
-                    </div>
-                  )}
-                  {/* end of modal */}
+
                   <div className="h-[1px] w-[768px] bg-[black] max-w-full mx-auto mt-[53px] mb-[25px]"></div>
                   <div className="flex justify-between w-[768px] items-center mx-auto">
                     <div className="text-black ">
@@ -305,7 +315,28 @@ const Page = () => {
               className="animate__animated animate__fadeIn transition delay-150 duration-300 ease-in-out"
             >
               {index === current && (
-                <section className="relative">
+                <section className="">
+                  {/* modal */}
+                  {openModal && (
+                    <div className=" absolute top-0 left-0 z-30 bg-black/90 h-screen w-screen flex flex-col justify-center items-center">
+                      <div className="w-[327px] text-right">
+                        <button
+                          onClick={() => setOpenModal(false)}
+                          className="font-bold text-[14px] uppercase text-white leading-[3px] mb-[32px]"
+                        >
+                          close
+                        </button>
+                      </div>
+                      <Image
+                        src={urlMobileScreen}
+                        width={327}
+                        height={390}
+                        alt={slide.name}
+                        className="object-contain"
+                      />
+                    </div>
+                  )}
+                  {/* end of modal */}
                   <article className="flex flex-col place-items-center">
                     <div className="flex flex-col">
                       <div className="relative">
@@ -367,25 +398,7 @@ const Page = () => {
                       </div>
                     </div>
                   </article>
-                  {/* modal */}
-                  {openModal && (
-                    <div className="">
-                      <button
-                        onClick={() => setOpenModal(false)}
-                        className="z-20 absolute top-[300px] right-[30px] font-bold text-[14px] uppercase text-white leading-[3px]"
-                      >
-                        close
-                      </button>
-                      <Image
-                        src={urlMobileScreen}
-                        width={327}
-                        height={390}
-                        alt={slide.name}
-                        className=" object-contain absolute top-0 bg-black/90 h-screen w-screen z-10"
-                      />
-                    </div>
-                  )}
-                  {/* end of modal */}
+
                   <div className="h-[1px] w-[327px] bg-[black] max-w-full mx-auto mt-[123px] mb-[27px]"></div>
                   <div className="flex justify-between w-[327px] items-center mx-auto">
                     <div className="text-black ">
