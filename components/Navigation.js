@@ -9,7 +9,7 @@ import "animate.css";
 const Navigation = () => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
-    setToggle((toggle) => !toggle);
+    setToggle(!toggle);
   };
   const router = useRouter();
   return (
@@ -38,19 +38,19 @@ const Navigation = () => {
             onClick={() => router.push("/slideshow")}
             className="uppercase font-bold text-[12px] lg:leading-[2.5px] text-[#7D7D7D]"
           >
-            start slideshow
+            show slideshow
           </button>
-          {/* {
-            <button onClick={handleToggle} type="button">
-              {toggle ? (
-                <button onClick={() => router.push("/slideshow")}>
-                  show slideshow
-                </button>
-              ) : (
-                <button onClick={() => router.push("/")}>stop slideshow</button>
-              )}
-            </button>
-          } */}
+
+          {/* <button
+            onClick={handleToggle}
+            className="uppercase font-bold text-[12px] lg:leading-[2.5px] text-[#7D7D7D]"
+          >
+            {toggle ? (
+              <Link href="/">stop slideshow</Link>
+            ) : (
+              <Link href="/slideshow">show slideshow</Link>
+            )}
+          </button> */}
         </nav>
         <div className="max-w-full md:w-[1360px] h-[1px] mx-auto my-[23px]  md:my-10 bg-[#E5E5E5]"></div>
       </section>
