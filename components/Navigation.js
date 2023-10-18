@@ -14,8 +14,8 @@ const Navigation = () => {
   const router = useRouter();
   return (
     <>
-      <section className="animate__animated animate__flipInX relative">
-        <nav className="flex justify-between w-[327px] md:w-[688px] lg:w-[1360px] mt-[29px] md:mt-10 mx-auto">
+      <section className="animate__animated animate__flipInX relative pt-[29px] pd:mt-10">
+        <nav className="flex justify-between w-[327px] md:w-[688px] lg:w-[1360px] mx-auto">
           <Link href="/">
             <Image
               src={Logo}

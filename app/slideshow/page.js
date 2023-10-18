@@ -46,7 +46,7 @@ const Page = ({}) => {
                 <section className="">
                   {/* modal */}
                   {openModal && (
-                    <div className="absolute top-0 left-0 z-30 h-screen w-screen bg-black/90 flex justify-center items-center">
+                    <div className="box z-30 bg-black/90 flex justify-center items-center">
                       <div>
                         <div className="w-[475px] flex justify-end">
                           <button
@@ -186,7 +186,7 @@ const Page = ({}) => {
                 <section className="rel">
                   {/* modal */}
                   {openModal && (
-                    <div className="absolute top-0 left-0 bg-black/90 z-30 h-screen w-screen flex flex-col justify-center items-center">
+                    <div className="box bg-black/90 z-30 h-screen w-screen flex flex-col justify-center items-center">
                       <div className="w-[700px] text-right mb-[41px]">
                         <button
                           onClick={() => setOpenModal(false)}
@@ -318,11 +318,11 @@ const Page = ({}) => {
                 <section className="">
                   {/* modal */}
                   {openModal && (
-                    <div className=" absolute top-0 left-0 z-30 bg-black/90 h-screen w-screen flex flex-col justify-center items-center">
+                    <div className="absolute box z-30 bg-black/90 flex flex-col justify-center items-center">
                       <div className="w-[327px] text-right">
                         <button
                           onClick={() => setOpenModal(false)}
-                          className="font-bold text-[14px] uppercase text-white leading-[3px] mb-[32px]"
+                          className="font-bold text-[14px] uppercase text-white leading-[3px] mb-[32px] z-30"
                         >
                           close
                         </button>
