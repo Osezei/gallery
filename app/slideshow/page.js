@@ -323,7 +323,7 @@ const Page = ({}) => {
                         {/* w-[327px] mx-auto mt-[45% */}
                         <button
                           onClick={() => setOpenModal(false)}
-                          className="font-bold text-[14px] uppercase text-white leading-[3px] mb-[32px] w-full text-right"
+                          className="font-bold text-[14px] overflow-visible uppercase text-white leading-[3px] mb-[32px] w-full text-right"
                         >
                           close
                         </button>
