@@ -319,11 +319,11 @@ const Page = ({}) => {
                   {/* modal */}
                   {openModal && (
                     <div className="small-screen-box z-30 bg-black/90 flex justify-center items-center">
-                      <div className="">
+                      <div className="overflow-visible">
                         {/* w-[327px] mx-auto mt-[45% */}
                         <button
                           onClick={() => setOpenModal(false)}
-                          className="font-bold text-[14px] uppercase text-white leading-[3px] h-full pb-[32px] w-full text-right"
+                          className="font-bold text-[14px] uppercase text-white leading-[3px] h-full pb-[28px] w-full text-right"
                         >
                           close
                         </button>
