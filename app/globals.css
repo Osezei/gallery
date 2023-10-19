@@ -37,27 +37,27 @@ body {
     rgb(var(--background-start-rgb)); */
   background-color: #fff;
   padding-bottom: 20px;
-  position: relative;
+  /* position: relative; */
   height: 100%;
+  /* overflow-y: hidden; */
 }
 .box {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  /* overflow-y: hidden; */
 }
 .small-screen-box {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
-.hey {
-  position: absolute;
-  top: 0;
-}
+
 p {
   font-family: "Libre Baskerville", serif;
 }

@@ -318,15 +318,15 @@ const Page = ({}) => {
                 <section className="">
                   {/* modal */}
                   {openModal && (
-                    <div className="small-screen-box z-30 bg-black/90 ">
-                      <div className="w-[327px] mx-auto mt-[45%]">
+                    <div className="small-screen-box z-30 bg-black/90 flex justify-center items-center">
+                      <div className="">
+                        {/* w-[327px] mx-auto mt-[45% */}
                         <button
                           onClick={() => setOpenModal(false)}
                           className="font-bold text-[14px] uppercase text-white leading-[3px] mb-[32px] w-full text-right"
                         >
                           close
                         </button>
-
                         <Image
                           src={urlMobileScreen}
                           width={327}
